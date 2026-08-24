@@ -9,14 +9,14 @@
         "at": "0x0201",
         "cl": "0xff66",
         "ep": 1,
-        "fn": "zcl"
+        "fn": "zcl:attr"
     },
     "parse": {
         "at": "0x0201",
         "cl": "0xff66",
         "ep": 1,
         "eval": "Item.val = Attr.val",
-        "fn": "zcl"
+        "fn": "zcl:attr"
     },
     "refresh.interval": 730
 }
