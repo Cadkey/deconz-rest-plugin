@@ -10,9 +10,13 @@
     "_TZE200_yjjdcqsq",
     "_TZE200_utkemkbs",
     "_TZE200_locansqn",
-    "_TZE204_yjjdcqsq"
+    "_TZE204_yjjdcqsq",
+    "_TZE200_vs0skpuc",
+    "_TZE284_wtikaxzs"
   ],
   "modelid": [
+    "TS0601",
+    "TS0601",
     "TS0601",
     "TS0601",
     "TS0601",
@@ -24,7 +28,7 @@
     "TS0601"
   ],
   "vendor": "Tuya",
-  "product": "Temperature humidity sensor (TS0601)",
+  "product": "Temperature and humidity sensor (TS0601)",
   "sleeper": true,
   "status": "Gold",
   "subdevices": [
@@ -78,6 +82,18 @@
           "name": "attr/uniqueid"
         },
         {
+          "name": "config/battery",
+          "parse": {
+            "fn": "tuya",
+            "dpid": 4,
+            "eval": "Item.val = Attr.val"
+          },
+          "read": {
+            "fn": "none"
+          },
+          "default": 0
+        },
+        {
           "name": "config/offset",
           "default": 0
         },
@@ -92,19 +108,7 @@
           "parse": {
             "fn": "tuya",
             "dpid": 2,
-            "eval": "Item.val = (100 * Attr.val) + R.item('config/offset').val;"
-          },
-          "read": {
-            "fn": "none"
-          },
-          "default": 0
-        },
-        {
-          "name": "config/battery",
-          "parse": {
-            "fn": "tuya",
-            "dpid": 4,
-            "eval": "Item.val = Attr.val;"
+            "eval": "Item.val = (Attr.val * 100) + R.item('config/offset').val;"
           },
           "read": {
             "fn": "none"
@@ -163,19 +167,19 @@
           "name": "attr/uniqueid"
         },
         {
-          "name": "config/offset",
-          "default": 0
-        },
-        {
           "name": "config/battery",
           "parse": {
             "fn": "tuya",
             "dpid": 4,
-            "eval": "Item.val = Attr.val;"
+            "eval": "Item.val = Attr.val"
           },
           "read": {
             "fn": "none"
           },
+          "default": 0
+        },
+        {
+          "name": "config/offset",
           "default": 0
         },
         {
@@ -192,7 +196,7 @@
           "parse": {
             "fn": "tuya",
             "dpid": 1,
-            "eval": "Item.val = (10 * Attr.val) + R.item('config/offset').val;"
+            "eval": "Item.val = (Attr.val * 10) + R.item('config/offset').val;"
           },
           "read": {
             "fn": "none"
