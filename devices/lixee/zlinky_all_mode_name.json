@@ -482,7 +482,7 @@
         },
         {
           "name": "state/alarm",
-          "refresh.interval": 60,
+          "refresh.interval": 70,
           "read": {
             "at": "0x0005",
             "cl": "0xff66",
