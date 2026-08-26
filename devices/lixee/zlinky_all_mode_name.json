@@ -55,7 +55,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0100",
             "cl": "0x0702",
@@ -123,7 +123,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0102",
             "cl": "0x0702",
@@ -191,7 +191,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0104",
             "cl": "0x0702",
@@ -259,7 +259,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0106",
             "cl": "0x0702",
@@ -327,7 +327,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0108",
             "cl": "0x0702",
@@ -395,7 +395,7 @@
         },
         {
           "name": "state/consumption",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x010A",
             "cl": "0x0702",
@@ -488,7 +488,7 @@
         },
         {
           "name": "state/alarm",
-          "refresh.interval": 30,
+          "refresh.interval": 60,
           "read": {
             "at": "0x0005",
             "cl": "0xff66",
